@@ -63,7 +63,14 @@ c = "Andrew"
 # print(c.isnumeric())
 # print(c.isalpha())
 
-age = 35
+# age = 35
 
-print("my age is %.1f" % age)
-print("my age is %.2f" % age)
+# print("my age is %.1f" % age)
+# print("my age is %.2f" % age)
+
+# a, b, c = "one", "two", "three"
+# print("{2} {1} {0}".format(a, b, c))
+
+a, b, c = 10, 20, 30
+
+print("{2:d} {1:.2f} {0:.5f}".format(a, b, c))
