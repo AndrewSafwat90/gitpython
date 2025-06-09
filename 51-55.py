@@ -44,27 +44,83 @@
 # print("All Ranks Printed")
 
 
-my_ranks = {
-    'Math': 'A',
-    'Science': 'B',
-    'Drawing': 'A',
-    'Sports': 'C'
+# my_ranks = {
+#     'Math': 'A',
+#     'Science': 'B',
+#     'Drawing': 'A',
+#     'Sports': 'C'
+# }
+
+# my_points = {
+#     "A": 100,
+#     "B": 80,
+#     "C": 40
+# }
+# sum = 0
+# for subject in my_ranks:
+#     for point in my_points:
+#         if my_ranks[subject] == point:
+#             sum += my_points[point]
+#             print(
+#                 f"My Rank in {subject} is {my_ranks[subject]} This Equal {my_points[point]} Points")
+# print(f"Total Points: {sum}")
+
+
+# print("*" * 50)
+# التكليف 04
+
+
+students = {
+    "Ahmed": {
+        "Math": "A",
+        "Science": "D",
+        "Draw": "B",
+        "Sports": "C",
+        "Thinking": "A"
+    },
+    "Sayed": {
+        "Math": "B",
+        "Science": "B",
+        "Draw": "B",
+        "Sports": "D",
+        "Thinking": "A"
+    },
+    "Mahmoud": {
+        "Math": "D",
+        "Science": "A",
+        "Draw": "A",
+        "Sports": "B",
+        "Thinking": "B"
+    }
 }
 
 my_points = {
     "A": 100,
     "B": 80,
-    "C": 40
+    "C": 40,
+    "D": 20
 }
-sum = 0
-for subject in my_ranks:
-    for point in my_points:
-        if my_ranks[subject] == point:
-            sum += my_points[point]
-            print(
-                f"My Rank in {subject} is {my_ranks[subject]} This Equal {my_points[point]} Points")
-print(f"Total Points: {sum}")
+for student, subject_main in students.items():
+    print("-" * 50)
+    print(f"-- Student Name => {student} --")
+    print("-" * 50)
+    total = 0
+    for subject, grade in subject_main.items():
+        point = my_points[grade]
+        print(f"{subject} ==>> {point} points")
+        total += point
+    print(f"Total Points for {student}: {total} points")
 
-
-print("*" * 50)
-# التكليف 04
+for student in students:
+    print("-" * 50)
+    print(f"-- Student Name => {student} --")
+    print("-" * 50)
+    total = 0
+    for subjects in students[student]:
+        # Get the grade for the subject
+        grade = students[student][subjects]
+        # Get the points for the grade
+        point = my_points[grade]
+        print(f"{subjects} ==>> {point} points")
+        total += point
+    print(f"Total Points for {student}: {total} points")
