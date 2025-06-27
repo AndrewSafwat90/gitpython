@@ -5,3 +5,4 @@ ultimateLists = zip(list1, list2)
 print(ultimateLists)
 for item in ultimateLists:
     print(item)
+# print(type(ultimateLists))
