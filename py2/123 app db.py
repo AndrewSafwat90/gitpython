@@ -58,7 +58,10 @@ def delete_skill():
 
 
 def update_skill_progress():
-    print("Updating skill progress...")
+    sk = input("Enter Skill name: ").strip().capitalize()
+    progress = input("Enter the new Skill progress: ").strip()
+    cr.execute(
+        f"update skills set progress = '{progress}' where name = '{sk}' and user_id = {user_id}")
     commit_and_close()
 
 
