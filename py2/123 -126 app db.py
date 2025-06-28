@@ -44,9 +44,22 @@ def show_all_skills():
 
 def add_new_skill():
     sk = input("Enter Skill name: ").strip().capitalize()
-    progress = input("Enter Skill progress: ").strip()
     cr.execute(
-        f"INSERT INTO skills (name, progress, user_id) VALUES ('{sk}', '{progress}', '{user_id}')")
+        f"select name from skills where name = '{sk}' and user_id = {user_id}")
+    result = cr.fetchone()
+    if result == None:
+        progress = input("Enter Skill progress: ").strip()
+        cr.execute(
+            f"INSERT INTO skills (name, progress, user_id) VALUES ('{sk}', '{progress}', '{user_id}')")
+    else:
+        new_input = input(
+            f"You already have {sk} skill. choos Y for Yes update progress or N for No and exit the program: ")
+        if new_input.lower() == "y":
+            progress = input("Enter Skill progress: ").strip()
+            cr.execute(
+                f"update skills set progress = '{progress}' where name = '{sk}' and user_id = {user_id}")
+        else:
+            print(f"Skill {sk} already exists. No changes made.")
     commit_and_close()
 
 
