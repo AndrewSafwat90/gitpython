@@ -1,0 +1,16 @@
+root CRITICAL This is a critical message 2025-07-09 15:06:23,149
+root ERROR This is an error message 2025-07-09 15:06:23,149
+root WARNING This is a warning message 2025-07-09 15:06:23,149
+root CRITICAL This is a critical message 2025-07-09 15:06:48,889
+root ERROR This is an error message 2025-07-09 15:06:48,889
+root WARNING This is a warning message 2025-07-09 15:06:48,889
+root CRITICAL This is a critical message 2025-July-09 15:09:33
+root ERROR This is an error message 2025-July-09 15:09:33
+root WARNING This is a warning message 2025-July-09 15:09:33
+root CRITICAL This is a critical message 2025-July-09 15:10:21
+root ERROR This is an error message 2025-July-09 15:10:21
+root WARNING This is a warning message 2025-July-09 15:10:21
+root CRITICAL This is a critical message 2025-July-09 15:26:33
+root ERROR This is an error message 2025-July-09 15:26:33
+root WARNING This is a warning message 2025-July-09 15:26:33
+log1 WARNING This is a warning message from log1 2025-July-09 15:26:33
