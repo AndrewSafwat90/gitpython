@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: blueviolet;
+    font-family: Arial, Tahoma;
+}
+.page-head, .page-description {
+    text-align: center;
+}
